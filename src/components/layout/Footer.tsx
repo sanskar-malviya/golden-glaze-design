@@ -13,9 +13,11 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gold-gradient rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-display font-bold text-xl">TD</span>
-              </div>
+              <img 
+                src="/Screenshot_2026-01-05_152806-removebg-preview.png" 
+                alt="Tiras Diamah Logo" 
+                className="w-12 h-12 object-contain"
+              />
               <div>
                 <h3 className="font-display text-lg font-semibold text-foreground">
                   Tiras Diamah

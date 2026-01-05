@@ -38,18 +38,22 @@ export const Header = () => {
         <div className="container-custom py-2">
           <div className="flex items-center justify-between text-sm">
             <div className="flex items-center gap-6">
-              <a href={`mailto:${companyInfo.email}`} className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+              <a
+                href={`mailto:${companyInfo.email}`}
+                className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+              >
                 <Mail className="w-4 h-4" />
                 {companyInfo.email}
               </a>
-              <a href={`tel:${companyInfo.phones[0]}`} className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+              <a
+                href={`tel:${companyInfo.phones[0]}`}
+                className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+              >
                 <Phone className="w-4 h-4" />
                 {companyInfo.phones[0]}
               </a>
             </div>
-            <div className="text-muted-foreground">
-              {companyInfo.location}
-            </div>
+            <div className="text-muted-foreground">{companyInfo.location}</div>
           </div>
         </div>
       </div>
@@ -67,14 +71,18 @@ export const Header = () => {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gold-gradient rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-display font-bold text-xl">TD</span>
-              </div>
+              <img
+                src="/Screenshot_2026-01-05_152806-removebg-preview.png"
+                alt="Tiras Diamah Logo"
+                className="w-12 h-12 object-contain"
+              />
               <div className="hidden sm:block">
                 <h1 className="font-display text-lg font-semibold text-foreground leading-tight">
                   Tiras Diamah
                 </h1>
-                <p className="text-xs text-muted-foreground">Technical Services</p>
+                <p className="text-xs text-muted-foreground">
+                  Technical Services
+                </p>
               </div>
             </Link>
 
@@ -117,7 +125,11 @@ export const Header = () => {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -145,7 +157,12 @@ export const Header = () => {
               </Link>
             ))}
             <div className="flex flex-col gap-3 pt-4">
-              <Button variant="gold-outline" size="lg" asChild className="w-full">
+              <Button
+                variant="gold-outline"
+                size="lg"
+                asChild
+                className="w-full"
+              >
                 <Link to="/quote">Get a Quote</Link>
               </Button>
               <Button variant="gold" size="lg" asChild className="w-full">
